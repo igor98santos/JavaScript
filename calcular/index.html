@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input placeholder="Valor1">
+<input placeholder="Valor2">
+<input placeholder="Resultado">
+<button>SOMAR</button>
+
+    <script>
+        const Valor1 = document.getElementsByTagName('input')[0].parseInt()
+        const Valor2 = document.getElementsByTagName('input')[1].parseInt()
+        const result = document.getElementsByTagName('input')[2].parseInt()
+        const btn = document.getElementsByTagName('button')
+       
+        btn.click() = somar
+        function somar(){
+         const soma = Valor1.value + Valor2.value
+          return result.value = soma 
+        }
+        
+    </script>
+</body>
+</html>

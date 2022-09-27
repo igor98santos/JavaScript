@@ -10,29 +10,19 @@
     <div wb-attrib>Segundo</div>
     <div class="ultimo terceiro"><span wb-attrib>.terceiro .ultimo</span></div>
     <script>              
-        document.querySelector('#primeiro').classList.add('destaque')
+       document.getElementById('primeiro').classList.add('destaque')
 
-        const selecionar = seletor =>
-            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
-        const deselecionar = seletor =>
-            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+       const divs = document.getElementsByTagName('div')
+       Array.from(divs).forEach(e => e.classList.remove('destaque'))
 
-        selecionar('div')
+       const divsArray = [...divs]
+       divsArray.forEach(e => e.classList.add('destaque'))
 
-        deselecionar('*')
-        selecionar('.terceiro.ultimo')
+       const ultimosElementos = document.getElementsByClassName('ultimo')
+       for(let e of ultimosElementos) {
+            e.classList.remove('destaque')
+       }
 
-        deselecionar('*')
-        selecionar(':not(#primeiro)')
-
-        deselecionar('*')
-        selecionar(':nth-child(1)')
-
-        deselecionar('*')
-        selecionar('div:nth-of-type(1)')
-
-        deselecionar('*')
-        selecionar('[wb-attrib]')
     </script>
 </body>
 </html>
